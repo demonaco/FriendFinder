@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
@@ -18,13 +18,15 @@
 <body>
     <h2>Survey Questions</h2>
     <br>
-        <input class="form-control form-control-lg" type="text" placeholder="Name">
+        <div>
+        <input class="form-control form-control-lg" id="nameField" type="text" placeholder="Name">
+       </div>
         <br>
         <br>
         <div id="container">
-        <input class="form-control form-control-lg" type="text" placeholder="Photo (URL required)">
+        <input class="form-control form-control-lg" id="photoField" type="text" placeholder="Photo (URL required)">
         <br>
-        <p>Below are 10 questions. You will pick a value answer from 1 (not likely) to 5 (very likely) for each of them. Once you have completed the 10 questions, click the submit button and we'll find you your new friends for life! </p>
+        <p>Below are 10 questions. You will pick a value answer from 1 (not likely) to 5 (very likely) for each of them. Once you have completed the 10 questions, click the submit button and we'll find you your new BFF! </p>
     <h3>Question #1</h3>
     <p>Rank your answer to the following: "I love to travel, and exploring new locations/places is something I value".</p>
     <select class="form-control form-control-sm">
@@ -227,8 +229,64 @@
     </div>
 <br>
 <br>
-    <button type="button" class="btn btn-primary btn-lg btn-block">Submit answers</button>
+<!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModalCenter">
+            Submit Answers
+          </button>
+          <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 </body>
-
 </html>
+
+<script type="text/javascript">
+
+//capturing event click listener and assigning key/values for our newFriend object variable
+$("<button>").on("click", function(event){
+    event.preventDefault();
+
+    var newFriend = {
+        "name": $("#nameField").val().trim();
+        "photo": $("#photoField").val().trim();
+        "scores": [
+            //look up how to capture a score from a number form
+
+        ]
+
+    }
+    
+    console.log(newFriend);
+
+    $.post("/api/friends", newFriend, function(data){
+        if (data) {
+            alert("Your information has been submitted to our database")
+        } else {
+            alert("Sorry there was an issue, please try again")
+        }
+
+    })
+    //clear our answer fields
+    $("#nameField").val("")
+    $("#photoField").val("")
+
+});
+
+</script>
