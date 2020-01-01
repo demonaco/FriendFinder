@@ -1,8 +1,8 @@
 var friends = [
     {
         "name": "Sarah",
-        "photo": ""
-        "scores":[
+        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
+        "scores": [
             3,
             3,
             4,
@@ -17,7 +17,7 @@ var friends = [
     },
     {
         "name": "Michael",
-        "photo": "",
+        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/jeremy-mcknight-ix9I7kfMpcc-unsplash.jpg",
         "scores": [
             2,
             4,
@@ -34,7 +34,7 @@ var friends = [
     },
     {
         "name": "Paul",
-        "photo": "",
+        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/jd-chow-gutlccGLXKI-unsplash.jpg",
         "scores": [
             3,
             2,
@@ -51,7 +51,7 @@ var friends = [
     },
     {
         "name": "Alex",
-        "photo": "",
+        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/court-cook-le7D9QFiPr8-unsplash.jpg",
         "scores": [
             4,
             5,
@@ -68,7 +68,7 @@ var friends = [
     },
     {
         "name": "Lynn",
-        "photo": "",
+        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/michael-dam-mEZ3PoFGs_k-unsplash.jpg",
         "scores": [
             2,
             5,
@@ -79,7 +79,7 @@ var friends = [
             4,
             3,
             2,
-            5,
+            5
         ]
 
     },
