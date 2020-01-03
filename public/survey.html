@@ -50,8 +50,8 @@
             </option>
         </select>
         <h3>Question #2</h3>
-        <p>Rank your answer to the following: "I prefer to have my daily routine than have a day that is more
-            spontaneous".</p>
+        <p>Rank your answer to the following: "I prefer to have my daily set routine than have a day that is more
+            spontaneous or unknown".</p>
         <select class="form-control form-control-sm" id="Q2">
             <option>
                 <li>1</li>
@@ -92,7 +92,7 @@
         </select>
 
         <h3>Question #4</h3>
-        <p>Rank your answer to the following: "The amount a person tips says a lot about their character".</p>
+        <p>Rank your answer to the following: "The amount a person does or doesn't tip says a lot about their character".</p>
         <select class="form-control form-control-sm" id="Q4">
             <option>
                 <li>1</li>
@@ -134,7 +134,7 @@
 
 
         <h3>Question #6</h3>
-        <p>Rank your answer to the following: "I try to live my life by the "Golden Rule".</p>
+        <p>Rank your answer to the following: "The number one way I try to live my life is by following the "Golden Rule".</p>
         <select class="form-control form-control-sm" id="Q6">
             <option>
                 <li>1</li>
@@ -216,7 +216,7 @@
         </select>
 
         <h3>Question #10</h3>
-        <p>Rank your answer to the following: "Change scares"</p>
+        <p>Rank your answer to the following: "Change scares me."</p>
         <select class="form-control form-control-sm" id="Q10">
             <option>
                 <li>1</li>
@@ -265,7 +265,14 @@
             </div>
         </div>
     </div>
-
+<br>
+<br>
+    <footer>
+            <a href="../data/friends.js">API Friends List</a>
+            |
+            <a href="https://github.com/demonaco/FriendFinder">GitHub Repo</a>
+    </footer>
+<br>
 </body>
 
 </html>
@@ -290,15 +297,13 @@
             $("#Q8").val,
             $("#Q9").val,
             $("#Q10").val
-                //look up how to capture a score from a number form
-
             ]
 
         }
 
         console.log(newFriend);
 
-        $.post("/api/friends", newFriend, function (data) {
+        $.post("../api/friends", newFriend, function (data) {
             if (data) {
                 alert("Your information has been submitted to our database")
             } else {
