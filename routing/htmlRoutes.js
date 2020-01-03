@@ -1,5 +1,4 @@
 var path = require('path');
-var server = require("./server.js")
 
 module.exports = function(app) {
 
@@ -8,6 +7,7 @@ app.get("/", function(req, res){
 });
 
 app.get("/survey", function(req, res){
+    console.log("your in SURVEY")
     res.sendFile(path.join(__dirname, "../public/survey.html"))
 })
 
