@@ -8,7 +8,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
@@ -18,98 +19,21 @@
 <body>
     <h2>Survey Questions</h2>
     <br>
-        <div>
+    <div>
         <input class="form-control form-control-lg" id="nameField" type="text" placeholder="Name">
-       </div>
-        <br>
-        <br>
-        <div id="container">
+    </div>
+    <br>
+    <br>
+    <div id="container">
         <input class="form-control form-control-lg" id="photoField" type="text" placeholder="Photo (URL required)">
         <br>
-        <p>Below are 10 questions. You will pick a value answer from 1 (not likely) to 5 (very likely) for each of them. Once you have completed the 10 questions, click the submit button and we'll find you your new BFF! </p>
-    <h3>Question #1</h3>
-    <p>Rank your answer to the following: "I love to travel, and exploring new locations/places is something I value".</p>
-    <select class="form-control form-control-sm">
-        <option>
-            <li>1</li>
-        </option>
-        <option>
-            <li>2</li>
-        </option>
-        <option>
-            <li>3</li>
-        </option>
-        <option>
-            <li>4</li>
-        </option>
-        <option>
-            <li>5</li>
-        </option>
-    </select>
-    <h3>Question #2</h3>
-    <p>Rank your answer to the following: "I prefer to have my daily routine than have a day that is more spontaneous".</p>
-    <select class="form-control form-control-sm">
+        <p>Below are 10 questions. You will pick a value answer from 1 (not likely) to 5 (very likely) for each of them.
+            Once you have completed the 10 questions, click the submit button and we'll find you your new BFF! </p>
+        <h3>Question #1</h3>
+        <p>Rank your answer to the following: "I love to travel, and exploring new locations/places is something I
+            value".</p>
+        <select class="form-control form-control-sm" id="Q1">
             <option>
-                    <li>1</li>
-                </option>
-                <option>
-                    <li>2</li>
-                </option>
-                <option>
-                    <li>3</li>
-                </option>
-                <option>
-                    <li>4</li>
-                </option>
-                <option>
-                    <li>5</li>
-                </option>
-    </select>
-
-    <h3>Question #3</h3>
-    <p>Rank your answer to the following: "I love to eat new things and will try pretty much anything a first time."</p>
-    <select class="form-control form-control-sm">
-            <option>
-                    <li>1</li>
-                </option>
-                <option>
-                    <li>2</li>
-                </option>
-                <option>
-                    <li>3</li>
-                </option>
-                <option>
-                    <li>4</li>
-                </option>
-                <option>
-                    <li>5</li>
-                </option>
-    </select>
-
-    <h3>Question #4</h3>
-    <p>Rank your answer to the following: "The amount a person tips says a lot about their character".</p>
-    <select class="form-control form-control-sm">
-            <option>
-                    <li>1</li>
-                </option>
-                <option>
-                    <li>2</li>
-                </option>
-                <option>
-                    <li>3</li>
-                </option>
-                <option>
-                    <li>4</li>
-                </option>
-                <option>
-                    <li>5</li>
-                </option>
-    </select>
-
-    <h3>Question #5</h3>
-    <p>Rank your answer to the following: "Education is important to me. I think a person's educational level says a lot about them."</p>
-    <select class="form-control form-control-sm">
-         <option>
                 <li>1</li>
             </option>
             <option>
@@ -124,169 +48,283 @@
             <option>
                 <li>5</li>
             </option>
-    </select>
-
-
-    <h3>Question #6</h3>
-    <p>Rank your answer to the following: "I try to live my life by the "Golden Rule".</p>
-    <select class="form-control form-control-sm">
+        </select>
+        <h3>Question #2</h3>
+        <p>Rank your answer to the following: "I prefer to have my daily routine than have a day that is more
+            spontaneous".</p>
+        <select class="form-control form-control-sm" id="Q2">
             <option>
-                    <li>1</li>
-                </option>
-                <option>
-                    <li>2</li>
-                </option>
-                <option>
-                    <li>3</li>
-                </option>
-                <option>
-                    <li>4</li>
-                </option>
-                <option>
-                    <li>5</li>
-                </option>
-    </select>
-
-    <h3>Question #7</h3>
-    <p>Rank your answer to the following: "It's important to me that my friends share the same beliefs and values as I do."</p>
-    <select class="form-control form-control-sm">
+                <li>1</li>
+            </option>
             <option>
-                    <li>1</li>
-                </option>
-                <option>
-                    <li>2</li>
-                </option>
-                <option>
-                    <li>3</li>
-                </option>
-                <option>
-                    <li>4</li>
-                </option>
-                <option>
-                    <li>5</li>
-                </option>
-    </select>
-
-    <h3>Question #8</h3>
-   <p>Rank your answer to the following: "Reading books is important to me and I try to read books as often as possible."</p>
-    <select class="form-control form-control-sm">
+                <li>2</li>
+            </option>
             <option>
-                    <li>1</li>
-                </option>
-                <option>
-                    <li>2</li>
-                </option>
-                <option>
-                    <li>3</li>
-                </option>
-                <option>
-                    <li>4</li>
-                </option>
-                <option>
-                    <li>5</li>
-                </option>
-    </select>
-
-    <h3>Question #9</h3>
-    <p>Rank your answer to the following: "I prefer to be alone more times than not."</p>
-    <select class="form-control form-control-sm">
+                <li>3</li>
+            </option>
             <option>
-                    <li>1</li>
-                </option>
-                <option>
-                    <li>2</li>
-                </option>
-                <option>
-                    <li>3</li>
-                </option>
-                <option>
-                    <li>4</li>
-                </option>
-                <option>
-                    <li>5</li>
-                </option>
-    </select>
-
-    <h3>Question #10</h3>
-    <p>Rank your answer to the following: "Change scares"</p>
-    <select class="form-control form-control-sm">
+                <li>4</li>
+            </option>
             <option>
-                    <li>1</li>
-                </option>
-                <option>
-                    <li>2</li>
-                </option>
-                <option>
-                    <li>3</li>
-                </option>
-                <option>
-                    <li>4</li>
-                </option>
-                <option>
-                    <li>5</li>
-                </option>
-    </select>
+                <li>5</li>
+            </option>
+        </select>
+
+        <h3>Question #3</h3>
+        <p>Rank your answer to the following: "I love to eat new things and will try pretty much anything a first time."
+        </p>
+        <select class="form-control form-control-sm" id="Q3">
+            <option>
+                <li>1</li>
+            </option>
+            <option>
+                <li>2</li>
+            </option>
+            <option>
+                <li>3</li>
+            </option>
+            <option>
+                <li>4</li>
+            </option>
+            <option>
+                <li>5</li>
+            </option>
+        </select>
+
+        <h3>Question #4</h3>
+        <p>Rank your answer to the following: "The amount a person tips says a lot about their character".</p>
+        <select class="form-control form-control-sm" id="Q4">
+            <option>
+                <li>1</li>
+            </option>
+            <option>
+                <li>2</li>
+            </option>
+            <option>
+                <li>3</li>
+            </option>
+            <option>
+                <li>4</li>
+            </option>
+            <option>
+                <li>5</li>
+            </option>
+        </select>
+
+        <h3>Question #5</h3>
+        <p>Rank your answer to the following: "Education is important to me. I think a person's educational level says a
+            lot about them."</p>
+        <select class="form-control form-control-sm" id="Q5">
+            <option>
+                <li>1</li>
+            </option>
+            <option>
+                <li>2</li>
+            </option>
+            <option>
+                <li>3</li>
+            </option>
+            <option>
+                <li>4</li>
+            </option>
+            <option>
+                <li>5</li>
+            </option>
+        </select>
+
+
+        <h3>Question #6</h3>
+        <p>Rank your answer to the following: "I try to live my life by the "Golden Rule".</p>
+        <select class="form-control form-control-sm" id="Q6">
+            <option>
+                <li>1</li>
+            </option>
+            <option>
+                <li>2</li>
+            </option>
+            <option>
+                <li>3</li>
+            </option>
+            <option>
+                <li>4</li>
+            </option>
+            <option>
+                <li>5</li>
+            </option>
+        </select>
+
+        <h3>Question #7</h3>
+        <p>Rank your answer to the following: "It's important to me that my friends share the same beliefs and values as
+            I do."</p>
+        <select class="form-control form-control-sm" id="Q7">
+            <option>
+                <li>1</li>
+            </option>
+            <option>
+                <li>2</li>
+            </option>
+            <option>
+                <li>3</li>
+            </option>
+            <option>
+                <li>4</li>
+            </option>
+            <option>
+                <li>5</li>
+            </option>
+        </select>
+
+        <h3>Question #8</h3>
+        <p>Rank your answer to the following: "Reading books is important to me and I try to read books as often as
+            possible."</p>
+        <select class="form-control form-control-sm" id="Q8">
+            <option>
+                <li>1</li>
+            </option>
+            <option>
+                <li>2</li>
+            </option>
+            <option>
+                <li>3</li>
+            </option>
+            <option>
+                <li>4</li>
+            </option>
+            <option>
+                <li>5</li>
+            </option>
+        </select>
+
+        <h3>Question #9</h3>
+        <p>Rank your answer to the following: "I prefer to be alone more times than not."</p>
+        <select class="form-control form-control-sm" id="Q9">
+            <option>
+                <li>1</li>
+            </option>
+            <option>
+                <li>2</li>
+            </option>
+            <option>
+                <li>3</li>
+            </option>
+            <option>
+                <li>4</li>
+            </option>
+            <option>
+                <li>5</li>
+            </option>
+        </select>
+
+        <h3>Question #10</h3>
+        <p>Rank your answer to the following: "Change scares"</p>
+        <select class="form-control form-control-sm" id="Q10">
+            <option>
+                <li>1</li>
+            </option>
+            <option>
+                <li>2</li>
+            </option>
+            <option>
+                <li>3</li>
+            </option>
+            <option>
+                <li>4</li>
+            </option>
+            <option>
+                <li>5</li>
+            </option>
+        </select>
     </div>
-<br>
-<br>
-<!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModalCenter">
-            Submit Answers
-          </button>
-          <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <br>
+    <br>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal">
+        Submit Answers
+    </button>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+            <!--content for modal-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
             </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 
 </body>
+
 </html>
 
 <script type="text/javascript">
 
-//capturing event click listener and assigning key/values for our newFriend object variable
-$("<button>").on("click", function(event){
-    event.preventDefault();
 
-    var newFriend = {
-        "name": $("#nameField").val().trim();
-        "photo": $("#photoField").val().trim();
-        "scores": [
-            //look up how to capture a score from a number form
+    //capturing event click listener and assigning key/values for our newFriend object variable
+    $("<button>").on("click", function (event) {
+        event.preventDefault();
 
-        ]
+        var newFriend = {
+            "name": $("#nameField").val().trim();
+            "photo": $("#photoField").val().trim();
+            "scores": [$("#Q1").val,
+            $("#Q2").val,
+            $("#Q3").val,
+            $("#Q4").val,
+            $("#Q5").val,
+            $("#Q6").val,
+            $("#Q7").val,
+            $("#Q8").val,
+            $("#Q9").val,
+            $("#Q10").val
+                //look up how to capture a score from a number form
 
-    }
-    
-    console.log(newFriend);
+            ]
 
-    $.post("/api/friends", newFriend, function(data){
-        if (data) {
-            alert("Your information has been submitted to our database")
-        } else {
-            alert("Sorry there was an issue, please try again")
         }
 
-    })
-    //clear our answer fields
-    $("#nameField").val("")
-    $("#photoField").val("")
+        console.log(newFriend);
 
-});
+        $.post("/api/friends", newFriend, function (data) {
+            if (data) {
+                alert("Your information has been submitted to our database")
+            } else {
+                alert("Sorry there was an issue, please try again")
+            }
+
+        })
+        //clear our answer fields
+        $("#nameField").val("")
+        $("#photoField").val("")
+
+    });
+    //running query to get current API list of data
+    function dataQuery() {
+        $.ajax({ url: "/api/friends", method: "GET" })
+    }.then(function (friends) {
+        console.log(friends)
+        console.log("------------------------------")
+
+        //code to go through friends array and compare absolute difference numbers from array of data to current user who submitted answers
+        for (var i = 0; i < friends.length; i++) {
+
+            var modalFriend = $("#modal-content");
+
+
+        }
+    })
 
 </script>
