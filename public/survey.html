@@ -49,6 +49,7 @@
                 <li>5</li>
             </option>
         </select>
+        <br>
         <h3>Question #2</h3>
         <p>Rank your answer to the following: "I prefer to have my daily set routine than have a day that is more
             spontaneous or unknown".</p>
@@ -69,7 +70,7 @@
                 <li>5</li>
             </option>
         </select>
-
+        <br>
         <h3>Question #3</h3>
         <p>Rank your answer to the following: "I love to eat new things and will try pretty much anything a first time."
         </p>
@@ -90,9 +91,10 @@
                 <li>5</li>
             </option>
         </select>
-
+        <br>
         <h3>Question #4</h3>
-        <p>Rank your answer to the following: "The amount a person does or doesn't tip says a lot about their character".</p>
+        <p>Rank your answer to the following: "The amount a person does or doesn't tip says a lot about their
+            character".</p>
         <select class="form-control form-control-sm" id="Q4">
             <option>
                 <li>1</li>
@@ -110,7 +112,7 @@
                 <li>5</li>
             </option>
         </select>
-
+        <br>
         <h3>Question #5</h3>
         <p>Rank your answer to the following: "Education is important to me. I think a person's educational level says a
             lot about them."</p>
@@ -131,10 +133,10 @@
                 <li>5</li>
             </option>
         </select>
-
-
+        <br>
         <h3>Question #6</h3>
-        <p>Rank your answer to the following: "The number one way I try to live my life is by following the "Golden Rule".</p>
+        <p>Rank your answer to the following: "The number one way I try to live my life is by following the "Golden
+            Rule".</p>
         <select class="form-control form-control-sm" id="Q6">
             <option>
                 <li>1</li>
@@ -152,7 +154,7 @@
                 <li>5</li>
             </option>
         </select>
-
+        <br>
         <h3>Question #7</h3>
         <p>Rank your answer to the following: "It's important to me that my friends share the same beliefs and values as
             I do."</p>
@@ -173,7 +175,7 @@
                 <li>5</li>
             </option>
         </select>
-
+        <br>
         <h3>Question #8</h3>
         <p>Rank your answer to the following: "Reading books is important to me and I try to read books as often as
             possible."</p>
@@ -194,7 +196,7 @@
                 <li>5</li>
             </option>
         </select>
-
+        <br>
         <h3>Question #9</h3>
         <p>Rank your answer to the following: "I prefer to be alone more times than not."</p>
         <select class="form-control form-control-sm" id="Q9">
@@ -214,7 +216,7 @@
                 <li>5</li>
             </option>
         </select>
-
+        <br>
         <h3>Question #10</h3>
         <p>Rank your answer to the following: "Change scares me."</p>
         <select class="form-control form-control-sm" id="Q10">
@@ -239,7 +241,8 @@
     <br>
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal">
+    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal"
+        id="submitButton">
         Submit Answers
     </button>
 
@@ -265,14 +268,14 @@
             </div>
         </div>
     </div>
-<br>
-<br>
+    <br>
+    <br>
     <footer>
-            <a href="../data/friends.js">API Friends List</a>
-            |
-            <a href="https://github.com/demonaco/FriendFinder">GitHub Repo</a>
+        <a href="/api/friends">API Friends List</a>
+        |
+        <a href="https://github.com/demonaco/FriendFinder">GitHub Repo</a>
     </footer>
-<br>
+    <br>
 </body>
 
 </html>
@@ -281,27 +284,28 @@
 
 
     //capturing event click listener and assigning key/values for our newFriend object variable
-    $("<button>").on("click", function (event) {
+    $("#submitButton").on("click", function (event) {
         event.preventDefault();
 
         var newFriend = {
-            "name": $("#nameField").val().trim();
-            "photo": $("#photoField").val().trim();
-            "scores": [$("#Q1").val,
-            $("#Q2").val,
-            $("#Q3").val,
-            $("#Q4").val,
-            $("#Q5").val,
-            $("#Q6").val,
-            $("#Q7").val,
-            $("#Q8").val,
-            $("#Q9").val,
-            $("#Q10").val
+            "name": $("#nameField").val().trim(),
+            "photo": $("#photoField").val().trim(),
+            "scores": [$("#Q1").val(),
+            $("#Q2").val(),
+            $("#Q3").val(),
+            $("#Q4").val(),
+            $("#Q5").val(),
+            $("#Q6").val(),
+            $("#Q7").val(),
+            $("#Q8").val(),
+            $("#Q9").val(),
+            $("#Q10").val()
             ]
 
         }
 
         console.log(newFriend);
+
 
         $.post("../api/friends", newFriend, function (data) {
             if (data) {
@@ -311,11 +315,14 @@
             }
 
         })
+
         //clear our answer fields
-        $("#nameField").val("")
-        $("#photoField").val("")
+        // $("#nameField").val("")
+        // $("#photoField").val("")
 
     });
+
+
     //running query to get current API list of data
     function dataQuery() {
         $.ajax({ url: "/api/friends", method: "GET" })
@@ -325,11 +332,15 @@
 
         //code to go through friends array and compare absolute difference numbers from array of data to current user who submitted answers
         for (var i = 0; i < friends.length; i++) {
-
-            var modalFriend = $("#modal-content");
-
-
+            for (var j = 0; j < friends[i].scores.length; j++) {
+                console.log(friends[i][j]);
+            }
         }
+
+        // var modalFriend = $("#modal-content");
+
+
+
     })
 
 </script>
