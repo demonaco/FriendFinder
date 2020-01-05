@@ -12,6 +12,10 @@ app.post("/api/friends", function (req, res) {
 });
 }
 
+//on click listener sends user data to friends.js, friends.js exports to apiRoutes, use API routs to create logic for comparison. After comparison is done append friend data to modal.
+
+//.abs look up for absolute value parseInt to wrap up in .abs to include negatives
+
 //Clear out friends data if needed
 
 // app.put("/api/clear", function(req, res) {
