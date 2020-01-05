@@ -306,6 +306,7 @@ alert("hello!")
 
         console.log(newFriend);
 
+        // Taking user input and sending it to our API Friends list as an object
         $.ajax({
             type: 'POST',
             url: '/api/friends',
@@ -322,18 +323,6 @@ alert("hello!")
 
         })
 
-        
-        // $.post("/api/friends", newFriend, function (data) {
-        //     if (data) {
-        //         alert("Your information has been submitted to our database")
-        //         console.log(data)
-        //     } else {
-        //         alert("Sorry there was an issue, please try again")
-        //     }
-
-        // })
-
-    
 
         //once info is submitted to API, do comparison
 
@@ -352,10 +341,32 @@ alert("hello!")
         $("#Q10").val("");
 
 
-    });
+        $.ajax({ url: '/api/friends', method: "GET" }).then(function(friends) {
+         console.log(friends);
+         console.log(newFriend.scores)
+         for (var i = 0; i < newFriend.scores.length; i++) {
+            console.log(newFriend.scores)
+            for (var j = 0; j < friends[j].scores.length; j++) {
+                console.log(friends[j].scores)
+                console.log(Math.abs.sum(newFriend.scores.length) - friends[j].scores.length)
+            }
+            
+        }
+        //     var friendsArray = friends[i].scores
+        //     for (var j = 0; j < friendsArray.length; j++) {
+            
+        //          console.log(friends[i][j]);
+        //      }
+        // }
 
+    //348 is good
 
-    // //running query to get current API list of data
+});
+
+    })
+</script>
+
+    <!-- // //running query to get current API list of data
     // function dataQuery() {
     //     $.ajax({ url: "/api/friends", method: "GET" })
     // }.then(function (friends) {
@@ -373,6 +384,4 @@ alert("hello!")
 
 
 
-    // })
-
-</script>
+    // }) -->

@@ -9,10 +9,11 @@ module.exports = function (app) {
 app.post("/api/friends", function (req, res) {
     friendsData.push(req.body);
     res.json(true);
+    console.log(friendsData)
 });
 }
 
-//on click listener sends user data to friends.js, friends.js exports to apiRoutes, use API routs to create logic for comparison. After comparison is done append friend data to modal.
+//on click listener sends user data to friends.js, friends.js exports to apiRoutes, use API routes to create logic for comparison. After comparison is done append friend data to modal.
 
 //.abs look up for absolute value parseInt to wrap up in .abs to include negatives
 
