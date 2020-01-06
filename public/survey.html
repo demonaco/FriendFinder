@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
@@ -12,7 +13,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> 
     <title>Friend Finder</title>
 </head>
 
@@ -254,7 +255,7 @@
             <!--content for modal-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Meet your new friend!</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -276,11 +277,14 @@
         <a href="https://github.com/demonaco/FriendFinder">GitHub Repo</a>
     </footer>
     <br>
-</body>
 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</body>
 </html>
 
-<script type="text/javascript">
+ <script type="text/javascript">
 
 alert("hello!")
     //capturing event click listener and assigning key/values for our newFriend object variable
@@ -396,8 +400,9 @@ alert("hello!")
                         //comparing absolute values to find closest match
                     if (resultOne == 0 || resultOne <=1 || resultOne<= 2) {
                         console.log("it is")
+                        var img1 = $("<img>")
                         $(".modal-body").text(friends[0].name)
-                        $(".modal-body").append(friends[0].photo)
+                        $(".modal-body").append(img1.attr('src', friends[0].photo))
                     } else if (resultTwo == 0 || resultTwo <=1 || resultThree <= 2) {
                         console.log("it is")
                         $(".modal-body").text(friends[1].name)
@@ -429,24 +434,4 @@ alert("hello!")
 });
 
     })
-</script>
-
-    <!-- // //running query to get current API list of data
-    // function dataQuery() {
-    //     $.ajax({ url: "/api/friends", method: "GET" })
-    // }.then(function (friends) {
-    //     console.log(friends)
-    //     console.log("------------------------------")
-
-    //     //code to go through friends array and compare absolute difference numbers from array of data to current user who submitted answers
-    //     for (var i = 0; i < friends.length; i++) {
-    //         for (var j = 0; j < friends[i].scores.length; j++) {
-    //             console.log(friends[i][j]);
-    //         }
-    //     }
-
-    //     // var modalFriend = $("#modal-content");
-
-
-
-    // }) -->
+</script> 
