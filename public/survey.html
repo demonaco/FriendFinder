@@ -341,17 +341,32 @@ alert("hello!")
         $("#Q10").val("");
 
 
+        // $.ajax({ url: '/api/friends', method: "GET" }).then(function(friends) {
+        //  console.log(friends);
+        //  console.log(newFriend.scores)
+        //  for (var i = 0; i < newFriend.scores.length; i++) {
+        //     console.log(newFriend.scores)
+        //     for (var j = 0; j < friends[j].scores; j++) {
+        //         console.log(friends[j].scores[j])
+        //         console.log(Math.abs.sum(newFriend.scores.length) - friends[j].scores.length)
+        //     }
+            
+        // }
+
         $.ajax({ url: '/api/friends', method: "GET" }).then(function(friends) {
          console.log(friends);
          console.log(newFriend.scores)
-         for (var i = 0; i < newFriend.scores.length; i++) {
-            console.log(newFriend.scores)
-            for (var j = 0; j < friends[j].scores.length; j++) {
-                console.log(friends[j].scores)
-                console.log(Math.abs.sum(newFriend.scores.length) - friends[j].scores.length)
+         for (var i = 0; i < friends[i].scores.length; i++) {
+            console.log(friends[i].scores)
+            for (var j = 0; j < newFriend.scores.length; j++) {
+                console.log(newFriend.scores[j] - friends[i].scores[i])
+            //    ((friends[i].scores.length) - (newFriend.scores[j].length)) 
+                // console.log(Math.abs.sum(newFriend.scores.length) - friends[j].scores.length)
             }
             
         }
+
+
         //     var friendsArray = friends[i].scores
         //     for (var j = 0; j < friendsArray.length; j++) {
             
