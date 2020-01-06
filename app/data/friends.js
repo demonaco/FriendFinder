@@ -1,7 +1,7 @@
 var friends = [
     {
         "name": "Sarah",
-        "photo": "https://static.techspot.com/images2/news/bigimage/2019/11/2019-11-21-image-6.png",
+        "photo": "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
         "scores": [
             3,
             3,
