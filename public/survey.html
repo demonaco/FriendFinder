@@ -260,7 +260,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -340,41 +340,91 @@ alert("hello!")
         $("#Q9").val("");
         $("#Q10").val("");
 
-
-        // $.ajax({ url: '/api/friends', method: "GET" }).then(function(friends) {
-        //  console.log(friends);
-        //  console.log(newFriend.scores)
-        //  for (var i = 0; i < newFriend.scores.length; i++) {
-        //     console.log(newFriend.scores)
-        //     for (var j = 0; j < friends[j].scores; j++) {
-        //         console.log(friends[j].scores[j])
-        //         console.log(Math.abs.sum(newFriend.scores.length) - friends[j].scores.length)
-        //     }
-            
-        // }
-
         $.ajax({ url: '/api/friends', method: "GET" }).then(function(friends) {
          console.log(friends);
          console.log(newFriend.scores)
          for (var i = 0; i < friends[i].scores.length; i++) {
             console.log(friends[i].scores)
             for (var j = 0; j < newFriend.scores.length; j++) {
-                console.log(newFriend.scores[j] - friends[i].scores[i])
-            //    ((friends[i].scores.length) - (newFriend.scores[j].length)) 
-                // console.log(Math.abs.sum(newFriend.scores.length) - friends[j].scores.length)
-            }
+                // console.log(Math.abs(newFriend.scores[j]) - Math.abs(friends[i].scores[i]))
+                    var userScoreArr = [];
+                    userScoreArr.push(newFriend.scores);
+                    console.log(userScoreArr);
+                    var dataFriendOne = [];
+                    dataFriendOne.push(friends[0].scores)
+                    console.log(dataFriendOne)
+                    var dataFriendTwo = [];
+                    dataFriendTwo.push(friends[1].scores)
+                    console.log(dataFriendTwo)
+                    var dataFriendThree = [];
+                    dataFriendThree.push(friends[2].scores)
+                    console.log(dataFriendThree)
+                    var dataFriendFour = [];
+                    dataFriendFour.push(friends[3].scores)
+                    console.log(dataFriendFour)
+                    var dataFriendFive = [];
+                    dataFriendFive.push(friends[4].scores)
+                    console.log(dataFriendFive);
+
+                    var resultOne = (eval(userScoreArr.join('+')) - eval(dataFriendOne.join('+')))
+                    console.log(resultOne);
+                    console.log(Math.abs(resultOne));
+                    var absOne = (Math.abs(resultOne))
+                    console.log(absOne);
+
+                    var resultTwo = (eval(userScoreArr.join('+')) - eval(dataFriendTwo.join('+')))
+                    console.log(resultOne);
+                    console.log(Math.abs(resultTwo));
+                    var absTwo = (Math.abs(resultTwo))
+
+                    var resultThree = (eval(userScoreArr.join('+')) - eval(dataFriendThree.join('+')))
+                    console.log(resultOne);
+                    console.log(Math.abs(resultThree));
+                    var absThree = (Math.abs(resultThree))
+
+                    var resultFour = (eval(userScoreArr.join('+')) - eval(dataFriendFour.join('+')))
+                    console.log(resultOne);
+                    console.log(Math.abs(resultFour));
+                    var absFour = (Math.abs(resultFour))
+
+
+                    var resultFive = (eval(userScoreArr.join('+')) - eval(dataFriendFive.join('+')))
+                    console.log(resultOne);
+                    console.log(Math.abs(resultFive));
+                    var absFive = (Math.abs(resultFive))
+
+                        //comparing absolute values to find closest match
+                    if (resultOne == 0 || resultOne <=1 || resultOne<= 2) {
+                        console.log("it is")
+                        $(".modal-body").text(friends[0].name)
+                        $(".modal-body").append(friends[0].photo)
+                    } else if (resultTwo == 0 || resultTwo <=1 || resultThree <= 2) {
+                        console.log("it is")
+                        $(".modal-body").text(friends[1].name)
+                        $(".modal-body").append(friends[1].photo)
+                    } else if (resultThree == 0 || resultThree <=1 || resultThree <= 2) {
+                        console.log("it is")
+                        $(".modal-body").text(friends[2].name)
+                        $(".modal-body").append(friends[2].photo)
+                    } else if (resultFour == 0 || resultFour <=1 || resultFour <= 2) {
+                        console.log("it is")
+                        $(".modal-body").text(friends[3].name)
+                        $(".modal-body").append(friends[3].photo)
+                    } else if (resultFive == 0 || resultFive <=1 || resultFive <= 2) {
+                        console.log("it is")
+                        $(".modal-body").text(friends[4].name)
+                        $(".modal-body").append(friends[4].photo)
+                    }
+
+
+
+                }
             
         }
 
-
-        //     var friendsArray = friends[i].scores
-        //     for (var j = 0; j < friendsArray.length; j++) {
-            
-        //          console.log(friends[i][j]);
-        //      }
-        // }
-
-    //348 is good
+        $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
 
 });
 
