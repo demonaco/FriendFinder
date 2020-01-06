@@ -1,7 +1,7 @@
 var friends = [
     {
         "name": "Sarah",
-        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
+        "photo": "https://static.techspot.com/images2/news/bigimage/2019/11/2019-11-21-image-6.png",
         "scores": [
             3,
             3,
@@ -17,7 +17,7 @@ var friends = [
     },
     {
         "name": "Michael",
-        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/jeremy-mcknight-ix9I7kfMpcc-unsplash.jpg",
+        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/jeremy-mcknight-ix9I7kfMpcc-unsplash.jpghttps://github.com/demonaco/FriendFinder/blob/master/assets/images/jd-chow-gutlccGLXKI-unsplash%202.jpg",
         "scores": [
             2,
             4,
@@ -34,7 +34,7 @@ var friends = [
     },
     {
         "name": "Paul",
-        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/jd-chow-gutlccGLXKI-unsplash.jpg",
+        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/jeremy-mcknight-ix9I7kfMpcc-unsplash%202.jpg",
         "scores": [
             3,
             2,
@@ -51,7 +51,7 @@ var friends = [
     },
     {
         "name": "Alex",
-        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/court-cook-le7D9QFiPr8-unsplash.jpg",
+        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/court-cook-le7D9QFiPr8-unsplash%202.jpg",
         "scores": [
             4,
             5,
@@ -68,7 +68,7 @@ var friends = [
     },
     {
         "name": "Lynn",
-        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/michael-dam-mEZ3PoFGs_k-unsplash.jpg",
+        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/michael-dam-mEZ3PoFGs_k-unsplash%202.jpg",
         "scores": [
             2,
             5,
