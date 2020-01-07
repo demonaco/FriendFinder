@@ -3,12 +3,12 @@ var friends = [
         "name": "Sarah",
         "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/brown-haired-girl-in-white-sleeveless-dress-standing-beside-756453.jpg?raw=true",
         "scores": [
-            3,
+            2,
             3,
             4,
             5,
             2,
-            1,
+            5,
             2,   
             3,
             4,
@@ -17,9 +17,9 @@ var friends = [
     },
     {
         "name": "Michael",
-        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/jeremy-mcknight-ix9I7kfMpcc-unsplash.jpghttps://github.com/demonaco/FriendFinder/blob/master/assets/images/jd-chow-gutlccGLXKI-unsplash%202.jpg",
+        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/photo-of-a-man-wearing-black-leather-jacket-977796.jpg?raw=true",
         "scores": [
-            2,
+            4,
             4,
             4,
             3,
@@ -34,11 +34,11 @@ var friends = [
     },
     {
         "name": "Paul",
-        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/jeremy-mcknight-ix9I7kfMpcc-unsplash%202.jpg",
+        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/man-wearing-denim-jacket-1427889.jpg?raw=true",
         "scores": [
             3,
             2,
-            3,
+            2,
             3,
             4,
             5,
@@ -51,9 +51,9 @@ var friends = [
     },
     {
         "name": "Alex",
-        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/court-cook-le7D9QFiPr8-unsplash%202.jpg",
+        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/closeup-photo-of-smiling-woman-wearing-blue-denim-jacket-1130626.jpg?raw=true",
         "scores": [
-            4,
+            1,
             5,
             5,
             3,
@@ -68,7 +68,7 @@ var friends = [
     },
     {
         "name": "Lynn",
-        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/michael-dam-mEZ3PoFGs_k-unsplash%202.jpg",
+        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/woman-wearing-white-sleeveless-shirt-and-white-denim-shorts-1082962.jpg?raw=true",
         "scores": [
             2,
             5,

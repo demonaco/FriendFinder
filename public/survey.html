@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script> 
+        crossorigin="anonymous"></script>
     <title>Friend Finder</title>
 </head>
 
@@ -261,7 +261,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -278,15 +278,17 @@
     </footer>
     <br>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
 
 </body>
+
 </html>
 
- <script type="text/javascript">
+<script type="text/javascript">
 
-alert("hello!")
     //capturing event click listener and assigning key/values for our newFriend object variable
     $("#submitButton").on("click", function (event) {
         event.preventDefault();
@@ -315,9 +317,8 @@ alert("hello!")
             type: 'POST',
             url: '/api/friends',
             data: newFriend,
-            success: function(data) {
+            success: function (data) {
                 if (data) {
-                    alert("Your information has been submitted to our database!");
                     console.log(data)
                 } else {
                     alert("Sorry, there was an error with your submission, please try again..")
@@ -344,94 +345,179 @@ alert("hello!")
         $("#Q9").val("");
         $("#Q10").val("");
 
-        $.ajax({ url: '/api/friends', method: "GET" }).then(function(friends) {
-         console.log(friends);
-         console.log(newFriend.scores)
-         for (var i = 0; i < friends[i].scores.length; i++) {
-            console.log(friends[i].scores)
-            for (var j = 0; j < newFriend.scores.length; j++) {
-                // console.log(Math.abs(newFriend.scores[j]) - Math.abs(friends[i].scores[i]))
+        $.ajax({ url: '/api/friends', method: "GET" }).then(function (friends) {
+
+            for (var i = 0; i < friends[i].scores.length; i++) {
+                
+                for (var j = 0; j < newFriend.scores.length; j++) {
+                    // console.log(Math.abs(newFriend.scores[j]) - Math.abs(friends[i].scores[i]))
                     var userScoreArr = [];
                     userScoreArr.push(newFriend.scores);
-                    console.log(userScoreArr);
+                    
                     var dataFriendOne = [];
                     dataFriendOne.push(friends[0].scores)
-                    console.log(dataFriendOne)
+                    
                     var dataFriendTwo = [];
                     dataFriendTwo.push(friends[1].scores)
-                    console.log(dataFriendTwo)
+                   
                     var dataFriendThree = [];
                     dataFriendThree.push(friends[2].scores)
-                    console.log(dataFriendThree)
+                    
                     var dataFriendFour = [];
                     dataFriendFour.push(friends[3].scores)
-                    console.log(dataFriendFour)
+                   
                     var dataFriendFive = [];
                     dataFriendFive.push(friends[4].scores)
-                    console.log(dataFriendFive);
+                   
 
                     var resultOne = (eval(userScoreArr.join('+')) - eval(dataFriendOne.join('+')))
-                    console.log(resultOne);
-                    console.log(Math.abs(resultOne));
+                    
                     var absOne = (Math.abs(resultOne))
-                    console.log(absOne);
+                    
 
                     var resultTwo = (eval(userScoreArr.join('+')) - eval(dataFriendTwo.join('+')))
-                    console.log(resultOne);
-                    console.log(Math.abs(resultTwo));
+                    
                     var absTwo = (Math.abs(resultTwo))
 
                     var resultThree = (eval(userScoreArr.join('+')) - eval(dataFriendThree.join('+')))
-                    console.log(resultOne);
-                    console.log(Math.abs(resultThree));
+                  
                     var absThree = (Math.abs(resultThree))
 
                     var resultFour = (eval(userScoreArr.join('+')) - eval(dataFriendFour.join('+')))
-                    console.log(resultOne);
-                    console.log(Math.abs(resultFour));
+                    
                     var absFour = (Math.abs(resultFour))
 
 
                     var resultFive = (eval(userScoreArr.join('+')) - eval(dataFriendFive.join('+')))
-                    console.log(resultOne);
-                    console.log(Math.abs(resultFive));
+                    
                     var absFive = (Math.abs(resultFive))
 
-                        //comparing absolute values to find closest match
-                    if (resultOne == 0 || resultOne <=1 || resultOne<= 2) {
-                        console.log("it is")
+                    //comparing absolute values to find closest match
+                    if (absOne = 0 || absOne <= 1) {
+                      
                         var img1 = $("<img>")
                         $(".modal-body").text(friends[0].name)
                         $(".modal-body").append(img1.attr('src', friends[0].photo))
-                    } else if (resultTwo == 0 || resultTwo <=1 || resultThree <= 2) {
-                        console.log("it is")
+                    } else if (absTwo = 0 || absTwo <= 1) {
+                        
+                        var img2 = $("<img>")
                         $(".modal-body").text(friends[1].name)
-                        $(".modal-body").append(friends[1].photo)
-                    } else if (resultThree == 0 || resultThree <=1 || resultThree <= 2) {
+                        $(".modal-body").append(img2.attr('src', friends[1].photo))
+                    } else if (absThree = 0 || absThree <= 1) {
+                        var img3 = $("<img>")
+                        
+                        $(".modal-body").text(friends[2].name)
+                        $(".modal-body").append(img3.attr('src', friends[2].photo))
+                    } else if (absFour = 0 || absFour <= 1) {
+                        var img4 = $("<img>")
+                        
+                        $(".modal-body").text(friends[3].name)
+                        $(".modal-body").append(img4.attr('src', friends[3].photo))
+                    } else if (absFive = 0 || absFive <= 1) {
+                        var img5 = $("<img>")
+                        
+                        $(".modal-body").text(friends[4].name)
+                        $(".modal-body").append(img5.attr('src', friends[4].photo))
+                    } else if (absOne = 2)
+                    {
+                   
+                        var img1 = $("<img>")
+                        $(".modal-body").text(friends[0].name)
+                        $(".modal-body").append(img1.attr('src', friends[0].photo))
+                    } else if (absTwo = 2 ) {
+                        
+                        var img2 = $("<img>")
+                        $(".modal-body").text(friends[1].name)
+                        $(".modal-body").append(img2.attr('src', friends[1].photo))
+
+                    } else if (absThree = 2) {
+                        var img3 = $("<img>")
                         console.log("it is")
                         $(".modal-body").text(friends[2].name)
-                        $(".modal-body").append(friends[2].photo)
-                    } else if (resultFour == 0 || resultFour <=1 || resultFour <= 2) {
-                        console.log("it is")
+                        $(".modal-body").append(img3.attr('src', friends[2].photo))
+
+                    } else if (absFour = 2) {
+                        var img4 = $("<img>")
+                       
                         $(".modal-body").text(friends[3].name)
-                        $(".modal-body").append(friends[3].photo)
-                    } else if (resultFive == 0 || resultFive <=1 || resultFive <= 2) {
-                        console.log("it is")
+                        $(".modal-body").append(img4.attr('src', friends[3].photo))
+
+                    } else if (absFive = 2) {
+                        var img5 = $("<img>")
+                        
                         $(".modal-body").text(friends[4].name)
-                        $(".modal-body").append(friends[4].photo)
+                        $(".modal-body").append(img5.attr('src', friends[4].photo))
                     }
+                     else if (absOne = 3)
+                    {
+                        
+                        var img1 = $("<img>")
+                        $(".modal-body").text(friends[0].name)
+                        $(".modal-body").append(img1.attr('src', friends[0].photo))
+                    } else if (absTwo = 3) {
+                        
+                        var img2 = $("<img>")
+                        $(".modal-body").text(friends[1].name)
+                        $(".modal-body").append(img2.attr('src', friends[1].photo))
 
+                    } else if (absThree = 3) {
+                        
+                        $(".modal-body").text(friends[2].name)
+                        $(".modal-body").append(img3.attr('src', friends[2].photo))
 
+                    } else if (absFour = 3) {
+                        var img4 = $("<img>")
+                       
+                        $(".modal-body").text(friends[3].name)
+                        $(".modal-body").append(img4.attr('src', friends[3].photo))
+
+                    } else if (absFive = 3) {
+                        var img5 = $("<img>")
+                        
+                        $(".modal-body").text(friends[4].name)
+                        $(".modal-body").append(img5.attr('src', friends[4].photo))
+                    } else if (absOne = 4)
+                    {
+                      
+                        var img1 = $("<img>")
+                        $(".modal-body").text(friends[0].name)
+                        $(".modal-body").append(img1.attr('src', friends[0].photo))
+                    } else if (absTwo = 4) {
+                        
+                        var img2 = $("<img>")
+                        $(".modal-body").text(friends[1].name)
+                        $(".modal-body").append(img2.attr('src', friends[1].photo))
+
+                    } else if (absThree = 4) {
+                        var img3 = $("<img>")
+                       
+                        $(".modal-body").text(friends[2].name)
+                        $(".modal-body").append(img3.attr('src', friends[2].photo))
+
+                    } else if (absFour = 4) {
+                        var img4 = $("<img>")
+                      
+                        $(".modal-body").text(friends[3].name)
+                        $(".modal-body").append(img4.attr('src', friends[3].photo))
+
+                    } else if (absFive = 4) {
+                        var img5 = $("<img>")
+                      
+                        $(".modal-body").text(friends[4].name)
+                        $(".modal-body").append(img5.attr('src', friends[4].photo))
+                    
 
                 }
-            
+
+            }
+
+            $('#myModal').on('shown.bs.modal', function () {
+                $('#myInput').trigger('focus')
+            })
         }
 
-        $('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
-
-});
+        })
 
     })
-</script> 
+
+</script>
