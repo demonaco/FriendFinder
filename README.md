@@ -26,7 +26,7 @@ The Friend Finder app is the go-to app to find your new friend! Answer a survey 
 ## Steps:
 1. I first analyzed the demo of the working application provided to us and went to Bootstrap and grabbed the component assets needed for the application. 
 
-2. Filled in text UI and wrote questions and provided <select> and <option> choices from 1-5. 
+2. Filled in text UI and wrote questions and answer selection choices from 1-5. 
 
 3. Found license-free images for our "friends".
 
