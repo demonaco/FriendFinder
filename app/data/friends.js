@@ -1,7 +1,7 @@
 var friends = [
     {
         "name": "Sarah",
-        "photo": "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "photo": "https://github.com/demonaco/FriendFinder/blob/master/assets/images/brown-haired-girl-in-white-sleeveless-dress-standing-beside-756453.jpg?raw=true",
         "scores": [
             3,
             3,
